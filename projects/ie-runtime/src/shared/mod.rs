@@ -1,6 +1,9 @@
-#[derive(Debug, Copy, Clone)]
-pub enum Error {
-    UnknownError
-}
+use crate::IEWorkspace;
 
-pub type Result<T> = std::result::Result<T, Error>;
+impl Default for IEWorkspace {
+    fn default() -> Self {
+        Self {
+
+        }
+    }
+}

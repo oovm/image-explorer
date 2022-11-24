@@ -2,6 +2,8 @@
 members = ["projects/*"]
 default-members = [
     "projects/ie-windows",
+    "projects/ie-runtime",
+    "projects/ie-cli",
 ]
 exclude = [
     "projects/.DS_Store",

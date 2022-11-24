@@ -1,4 +1,4 @@
-use winreg::enums::{HKEY_CURRENT_USER};
+use winreg::enums::HKEY_CURRENT_USER;
 use winreg::RegKey;
 
 // 在注册表中按照以下路径寻找
@@ -13,7 +13,19 @@ pub fn enable_thumbnails() -> std::io::Result<()> {
     Ok(())
 }
 
+pub fn register_software() -> std::io::Result<()> {
+    let hkcu = RegKey::predef(HKEY_CURRENT_USER);
+    let sw = hkcu.get_value::<String, &str>("Software");
+    println!("{:#?}", sw);
+
+    let explorer = hkcu.open_subkey("Software\\ImageExplorer")?;
+    // explorer.set_value("DisableThumbnails", &0u32)?;
+    println!("{:#?}", explorer);
+    Ok(())
+}
+
+
 #[test]
 fn test() {
-    enable_thumbnails().unwrap();
+    register_software().unwrap();
 }
