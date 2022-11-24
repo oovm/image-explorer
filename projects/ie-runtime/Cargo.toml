@@ -1,9 +1,9 @@
 [package]
-name = "ie"
+name = "ie-runtime"
 version = "0.0.0"
 authors = ["Aster <192607617@qq.com>"]
-description = "Image Explorer"
-repository = "https://github.com/oovm/sub_projects"
+description = "Image Explorer Runtime for Operator Sysyems"
+repository = "https://github.com/oovm/ie-runtime"
 documentation = "https://docs.rs/sub_projects"
 readme = "Readme.md"
 license = "MPL-2.0"
@@ -11,9 +11,9 @@ edition = "2021"
 
 [dependencies]
 
-[dependencies.ie-runtime]
+[dependencies.ie-windows]
 #version = "0.0.0"
-path = "../ie-runtime"
+path = "../ie-windows"
 
 [dev-dependencies]
 

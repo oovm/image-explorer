@@ -10,7 +10,13 @@ license = "MPL-2.0"
 edition = "2021"
 
 [dependencies]
-diagnostic-quick = "0.0.0"
+winreg = "0.10.1"
+
+[dependencies.diagnostic-quick]
+#version = "0.0.0"
+git = "https://github.com/oovm/diagnostic-rs.git"
+rev = "eaf110db"
+features = ["winreg"]
 
 [dev-dependencies]
 
