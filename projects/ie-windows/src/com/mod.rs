@@ -149,3 +149,8 @@ trait IInitializeWithStream
 {
     fn initialize(&self, stream: &ComItf<dyn IStream>, mode: DWORD) -> ComResult<()>;
 }
+
+#[test]
+fn ready() {
+    println!("it works!")
+}
