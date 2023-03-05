@@ -9,14 +9,21 @@ readme = "Readme.md"
 license = "MPL-2.0"
 edition = "2021"
 
+[lib]
+crate-type = [ "cdylib" ]
+
 [dependencies]
-winreg = "0.10.1"
+winreg = "0.11.0"
+intercom = "0.4.0"
+winapi = { version = "0.3", features = [ "winbase", "objidlbase", "wingdi", "debugapi" ] }
+simple-logging = "2.0"
+log = "0.4"
 
 [dependencies.diagnostic-quick]
-#version = "0.0.0"
-git = "https://github.com/oovm/diagnostic-rs.git"
-rev = "eaf110db"
-features = ["winreg"]
+version = "0.3.6"
+#git = "https://github.com/oovm/diagnostic-rs.git"
+#rev = "eaf110db"
+#features = ["winreg"]
 
 [dev-dependencies]
 
